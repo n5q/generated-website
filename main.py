@@ -2,6 +2,13 @@
 import sys
 import openai
 import flask
+import ssl
+
+context = ssl.SSLContext()
+context.load_cert_chain(
+    "/etc/letsencrypt/live/generated.website/fullchain.pem",
+    "/etc/letsencrypt/live/generated.website/privkey.pem"
+    )
 
 TOKEN = sys.argv[1]
 MODEL = "gpt-3.5-turbo"
@@ -37,4 +44,4 @@ def generate_page(url:str) -> str:
     return html
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80, debug=False)
+    app.run(host="0.0.0.0", ssl_context=context, debug=False)
