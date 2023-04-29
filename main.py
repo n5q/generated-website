@@ -44,4 +44,4 @@ def generate_page(url:str) -> str:
     return html
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", ssl_context=context, debug=False)
+    app.run(host="0.0.0.0", ssl_context=context, debug=False, port=443)
