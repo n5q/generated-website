@@ -13,8 +13,9 @@ app = flask.Flask(__name__)
 def index() -> None:
     return "<h1>e</h1>"
 
-@app.route("/<url>")
+@app.route("/<path:url>")
 def create_page(url) -> str:
+    print(url)
     html = generate_page(url)
     return html
 
@@ -36,4 +37,4 @@ def generate_page(url:str) -> str:
     return html
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=80, debug=False)
