@@ -17,8 +17,8 @@ PROMPT = open("prompt.txt", "r").read()
 app = flask.Flask(__name__)
 
 @app.route("/")
-def index() -> None:
-    return "<h1>e</h1>"
+def index() -> str:
+    return """<img src="https://www.unilad.co.uk/wp-content/uploads/2018/11/Big-neck-man-2.jpg">"""
 
 @app.route("/<path:url>")
 def create_page(url) -> str:
