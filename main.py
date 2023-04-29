@@ -36,4 +36,4 @@ def generate_page(url:str) -> str:
     return html
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
