@@ -5,3 +5,6 @@ Add images if needed by appending the image search term to the following url "ht
 The first line of the response should be "<!DOCTYPE html>" and the last line of the response should be "</html>"
 
 Otherwise, respond in the most appropriate format for the given request.
+
+DO NOT respond with ANY commentary or text that is not directly related to the requested URL.
+ONLY respond with the raw document
